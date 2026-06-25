@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Techniques Visualiser</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🎯 Sorting Techniques Visualiser</h1>
+        <p>Watch sorting algorithms in action with real-time performance metrics</p>
+    </header>
+    
+    <main>
+        <aside class="controls">
+            <section>
+                <h3>Algorithm</h3>
+                <select id="algorithm">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="quick">Quick Sort</option>
+                    <option value="heap">Heap Sort</option>
+                </select>
+            </section>
+            
+            <section>
+                <h3>Array Size</h3>
+                <input type="range" id="arraySize" min="10" max="500" value="100">
+                <span id="sizeDisplay">100</span>
+            </section>
+            
+            <section>
+                <h3>Speed</h3>
+                <input type="range" id="speed" min="1" max="100" value="50">
+                <span id="speedDisplay">1x</span>
+            </section>
+            
+            <section>
+                <h3>Input Pattern</h3>
+                <select id="pattern">
+                    <option value="random">Random</option>
+                    <option value="sorted">Sorted</option>
+                    <option value="reverse">Reverse Sorted</option>
+                    <option value="nearly">Nearly Sorted</option>
+                    <option value="few">Few Unique</option>
+                </select>
+            </section>
+            
+            <section>
+                <button id="play" class="btn-primary">▶ Play</button>
+                <button id="pause" class="btn-secondary">⏸ Pause</button>
+                <button id="reset" class="btn-secondary">↻ Reset</button>
+            </section>
+            
+            <section>
+                <h3>Statistics</h3>
+                <div class="stat">
+                    <span>Comparisons:</span>
+                    <span id="comparisons">0</span>
+                </div>
+                <div class="stat">
+                    <span>Swaps:</span>
+                    <span id="swaps">0</span>
+                </div>
+                <div class="stat">
+                    <span>Time:</span>
+                    <span id="time">0</span>ms
+                </div>
+            </section>
+        </aside>
+        
+        <section class="canvas-container">
+            <canvas id="canvas"></canvas>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Open source sorting algorithm visualiser | MIT License</p>
+    </footer>
+    
+    <script src="js/algorithms.js"></script>
+    <script src="js/visualizer.js"></script>
+</body>
+</html>
